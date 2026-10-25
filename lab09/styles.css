@@ -1,0 +1,223 @@
+
+/* General Page Styles */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7fb;
+    color: #222222;
+    margin: 0;
+    line-height: 1.6;
+}
+
+main {
+    margin: 20px;
+}
+
+h1 {
+    color: #17365d;
+    margin: 20px;
+}
+
+h2 {
+    color: #234d70;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Navigation */
+
+nav {
+    background-color: #17365d;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+nav a:visited {
+    color: #e1eaff;
+}
+
+nav a:hover {
+    background-color: #3977a8;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Contact Page Flexbox */
+
+.contact-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.contact-box {
+    flex: 1;
+    min-width: 0;
+    background-color: #e3edf7;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.contact-box h2 {
+    margin-top: 0;
+}
+
+/* Contact Form */
+
+form {
+    width: 100%;
+}
+
+form label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form select,
+form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    background-color: #17365d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #3977a8;
+}
+
+/* Contact Map */
+
+.contact-box iframe {
+    width: 100%;
+    max-width: 100%;
+    border: 0;
+}
+
+/* LinkedIn Logo */
+
+.linkedin-logo {
+    width: 30px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+/* Skills Page */
+
+.skills-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.skillsflexbox {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.skillstable {
+    flex-basis: 50%;
+    min-width: 0;
+}
+
+.skillsimage {
+    flex-basis: 50%;
+    min-width: 0;
+    text-align: center;
+}
+
+/* Center Skills Table */
+
+.skillstable table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 90%;
+}
+
+.skillstable table,
+.skillstable th,
+.skillstable td {
+    border: 1px solid #555555;
+}
+
+.skillstable th,
+.skillstable td {
+    padding: 12px;
+    text-align: left;
+}
+
+.skillstable th {
+    background-color: #17365d;
+    color: white;
+}
+
+.evenrow {
+    background-color: #dce9f5;
+}
+
+.skillstable caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #17365d;
+}
+
+/* Center Skills Image */
+
+.skillsimage img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+.copyright,
+.motto {
+    text-align: center;
+}
+
+/* Responsive Layout */
+
+@media screen and (max-width: 700px) {
+
+    .contact-row {
+        flex-direction: column;
+    }
+
+    .skillsflexbox {
+        flex-direction: column;
+    }
+
+    .skillstable,
+    .skillsimage {
+        width: 100%;
+    }
+
+}
