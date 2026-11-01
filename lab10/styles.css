@@ -1,0 +1,196 @@
+
+/* General Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #222222;
+    margin: 0;
+    line-height: 1.6;
+}
+
+main {
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #000E54;
+}
+
+/* Navigation */
+nav {
+    background-color: #000E54;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav a:hover {
+    background-color: #386FA4;
+    color: white;
+}
+
+nav span {
+    color: white;
+}
+
+/* Flexible Biography Image */
+.bioimage {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Skills Page */
+.skillsflexbox {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.skillstable {
+    flex: 1 1 350px;
+    min-width: 0;
+    overflow-x: auto;
+}
+
+.skillsimage {
+    flex: 1 1 250px;
+    min-width: 0;
+}
+
+.skillsimage img {
+    max-width: 100%;
+    height: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #000E54;
+    color: white;
+}
+
+.evenrow {
+    background-color: #e6e6e6;
+}
+
+caption {
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* Contact Page */
+.contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-box {
+    flex: 1 1 300px;
+    min-width: 0;
+    padding: 15px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
+.linkedin-logo {
+    width: 30px;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Contact Form */
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input,
+form select,
+form textarea {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+form input[type="text"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 8px;
+}
+
+form input[type="submit"] {
+    margin-top: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Responsive Map */
+.contact-box iframe {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    border: 0;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+}
+
+.copyright {
+    float: left;
+}
+
+.motto {
+    float: right;
+}
+
+footer::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Media Query for Tablets and Phones */
+@media only screen and (max-width: 800px) {
+
+    nav a {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+
+    nav span {
+        display: none;
+    }
+
+    .contact-row {
+        flex-wrap: wrap;
+    }
+
+    .skillsflexbox {
+        flex-wrap: wrap;
+    }
+
+    .copyright,
+    .motto {
+        float: none;
+    }
+}
