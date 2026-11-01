@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">Home</a> <span>|</span>
+        <a href="skills.html">Skills</a> <span>|</span>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+        <h1>Contact</h1>
+
+        <!-- First Row: Address and Contact Information -->
+        <div class="contact-row">
+
+            <div class="contact-box">
+                <h2>Address</h2>
+                <p>
+                    Finan Amare<br>
+                    Syracuse University<br>
+                    720 Sumner Ave<br>
+                    Syracuse, NY
+                </p>
+            </div>
+
+            <div class="contact-box">
+                <h2>Contact Information</h2>
+
+                <p>
+                    <a href="mailto:ffamare@syr.edu">
+                        ffamare@syr.edu
+                    </a>
+                </p>
+
+                <p>
+                    <a href="https://www.linkedin.com/in/finan-amare-5955ab349"
+                       target="_blank" rel="noopener noreferrer">
+                        <img src="../images/LI-In-Bug.png"
+                             alt="LinkedIn logo"
+                             class="linkedin-logo">
+                        My LinkedIn Profile
+                    </a>
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Second Row: Contact Form and Map -->
+        <div class="contact-row">
+
+            <div class="contact-box">
+                <h2>Contact Form</h2>
+
+                <form action="https://formspree.io/f/mgavoaqq"
+                      method="post">
+
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+
+                    <label for="reason">Reason for Contact:</label>
+                    <select id="reason" name="reason">
+                        <option value="question">Question</option>
+                        <option value="school">School</option>
+                        <option value="work">Work</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message"
+                              rows="5"></textarea>
+
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+
+            <div class="contact-box">
+                <h2>Location</h2>
+
+                <iframe
+                    title="Map of 720 Sumner Avenue, Syracuse"
+                    src="https://www.google.com/maps?q=720+Sumner+Ave+Syracuse+NY&amp;output=embed"
+                    width="600"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin">
+                </iframe>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
