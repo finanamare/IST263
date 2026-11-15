@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Slideshow</title>
+
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .slideshow {
+            background-color: black;
+            color: white;
+            width: 850px;
+            max-width: 95%;
+            margin: 30px auto;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .planets {
+            float: left;
+            width: 55%;
+        }
+
+        .planets img {
+            width: 100%;
+            height: 350px;
+            object-fit: contain;
+        }
+
+        .planetinfo {
+            float: right;
+            width: 40%;
+            padding-top: 45px;
+        }
+
+        .planetinfo h1 {
+            font-size: 28px;
+        }
+
+        .planetinfo h2 {
+            font-size: 22px;
+        }
+
+        .planetinfo p {
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .thumbnails {
+            clear: both;
+            text-align: center;
+            padding-top: 30px;
+        }
+
+        .thumbnails img {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+            cursor: pointer;
+        }
+
+        /* Hide the other planets and their information */
+
+        #venus, #earth, #mars, #jupiter,
+        #saturn, #uranus, #neptune,
+        #venusinfo, #earthinfo, #marsinfo,
+        #jupiterinfo, #saturninfo,
+        #uranusinfo, #neptuneinfo {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="slideshow">
+
+        <!-- Large planet images -->
+
+        <div class="planets">
+
+            <img src="images/mercury.svg" alt="Mercury" id="mercury">
+
+            <img src="images/venus.svg" alt="Venus" id="venus">
+
+            <img src="images/earth.svg" alt="Earth" id="earth">
+
+            <img src="images/mars.svg" alt="Mars" id="mars">
+
+            <img src="images/jupiter.svg" alt="Jupiter" id="jupiter">
+
+            <img src="images/saturn.svg" alt="Saturn" id="saturn">
+
+            <img src="images/uranus.svg" alt="Uranus" id="uranus">
+
+            <img src="images/neptune.svg" alt="Neptune" id="neptune">
+
+        </div>
+
+
+        <!-- Planet descriptions -->
+
+        <div class="planetinfo">
+
+            <div id="mercuryinfo">
+                <h1>Planet Slideshow</h1>
+                <h2>Mercury</h2>
+                <p>
+                    Mercury is the smallest planet in our solar
+                    system and the closest planet to the Sun.
+                    It has a rocky surface covered with craters.
+                </p>
+            </div>
+
+            <div id="venusinfo">
+                <h1>Planet Slideshow</h1>
+                <h2>Venus</h2>
+                <p>
+                    Venus is the second planet from the Sun.
+                    It has a thick atmosphere and is the
+                    hottest planet in our solar system.
+                </p>
+            </div>
+
+            <div id="earthinfo">
+                <h1>Planet Slideshow</h1>
+                <h2>Earth</h2>
+                <p>
+                    Earth is the third planet from the Sun.
+                    It is the only planet we know of that
+                    supports life.
+                </p>
+            </div>
+
+            <div id="marsinfo">
+                <h1>Planet Slideshow</h1>
+                <h2>Mars</h2>
+                <p>
+                    Mars is the fourth planet from the Sun.
+                    It is known as the Red Planet because
+                    of its reddish surface.
+                </p>
+            </div>
+
+            <div id="jupiterinfo">
+                <h1>Planet Slideshow</h1>
+                <h2>Jupiter</h2>
+                <p>
+                    Jupiter is the largest planet in our
+                    solar system. It is a gas giant and
+                    is known for its Great Red Spot.
+                </p>
+            </div>
+
+            <div id="saturninfo">
+                <h1>Planet Slideshow</h1>
+                <h2>Saturn</h2>
+                <p>
+                    Saturn is the sixth planet from the Sun.
+                    It is famous for its large rings made
+                    mostly of ice and rocks.
+                </p>
+            </div>
+
+            <div id="uranusinfo">
+                <h1>Planet Slideshow</h1>
+                <h2>Uranus</h2>
+                <p>
+                    Uranus is the seventh planet from the Sun.
+                    It is an ice giant with a blue-green
+                    color and rotates on its side.
+                </p>
+            </div>
+
+            <div id="neptuneinfo">
+                <h1>Planet Slideshow</h1>
+                <h2>Neptune</h2>
+                <p>
+                    Neptune is the eighth planet from the Sun.
+                    It is a blue ice giant known for
+                    its strong winds and storms.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- Small clickable planet images -->
+
+        <div class="thumbnails">
+
+            <img src="images/mercury.svg"
+                 alt="Mercury"
+                 id="mercurythumb"
+                 onclick="PlanetsOff(); MercuryOn();">
+
+            <img src="images/venus.svg"
+                 alt="Venus"
+                 id="venusthumb"
+                 onclick="PlanetsOff(); VenusOn();">
+
+            <img src="images/earth.svg"
+                 alt="Earth"
+                 id="earththumb"
+                 onclick="PlanetsOff(); EarthOn();">
+
+            <img src="images/mars.svg"
+                 alt="Mars"
+                 id="marsthumb"
+                 onclick="PlanetsOff(); MarsOn();">
+
+            <img src="images/jupiter.svg"
+                 alt="Jupiter"
+                 id="jupiterthumb"
+                 onclick="PlanetsOff(); JupiterOn();">
+
+            <img src="images/saturn.svg"
+                 alt="Saturn"
+                 id="saturnthumb"
+                 onclick="PlanetsOff(); SaturnOn();">
+
+            <img src="images/uranus.svg"
+                 alt="Uranus"
+                 id="uranusthumb"
+                 onclick="PlanetsOff(); UranusOn();">
+
+            <img src="images/neptune.svg"
+                 alt="Neptune"
+                 id="neptunethumb"
+                 onclick="PlanetsOff(); NeptuneOn();">
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+
+    <script>
+
+        // Turn off all planets and their information
+
+        function PlanetsOff() {
+
+            document.getElementById('mercury').style.display = 'none';
+            document.getElementById('venus').style.display = 'none';
+            document.getElementById('earth').style.display = 'none';
+            document.getElementById('mars').style.display = 'none';
+            document.getElementById('jupiter').style.display = 'none';
+            document.getElementById('saturn').style.display = 'none';
+            document.getElementById('uranus').style.display = 'none';
+            document.getElementById('neptune').style.display = 'none';
+
+            document.getElementById('mercuryinfo').style.display = 'none';
+            document.getElementById('venusinfo').style.display = 'none';
+            document.getElementById('earthinfo').style.display = 'none';
+            document.getElementById('marsinfo').style.display = 'none';
+            document.getElementById('jupiterinfo').style.display = 'none';
+            document.getElementById('saturninfo').style.display = 'none';
+            document.getElementById('uranusinfo').style.display = 'none';
+            document.getElementById('neptuneinfo').style.display = 'none';
+
+        }
+
+
+        // Show Mercury
+
+        function MercuryOn() {
+
+            document.getElementById('mercury').style.display = 'block';
+            document.getElementById('mercuryinfo').style.display = 'block';
+
+        }
+
+
+        // Show Venus
+
+        function VenusOn() {
+
+            document.getElementById('venus').style.display = 'block';
+            document.getElementById('venusinfo').style.display = 'block';
+
+        }
+
+
+        // Show Earth
+
+        function EarthOn() {
+
+            document.getElementById('earth').style.display = 'block';
+            document.getElementById('earthinfo').style.display = 'block';
+
+        }
+
+
+        // Show Mars
+
+        function MarsOn() {
+
+            document.getElementById('mars').style.display = 'block';
+            document.getElementById('marsinfo').style.display = 'block';
+
+        }
+
+
+        // Show Jupiter
+
+        function JupiterOn() {
+
+            document.getElementById('jupiter').style.display = 'block';
+            document.getElementById('jupiterinfo').style.display = 'block';
+
+        }
+
+
+        // Show Saturn
+
+        function SaturnOn() {
+
+            document.getElementById('saturn').style.display = 'block';
+            document.getElementById('saturninfo').style.display = 'block';
+
+        }
+
+
+        // Show Uranus
+
+        function UranusOn() {
+
+            document.getElementById('uranus').style.display = 'block';
+            document.getElementById('uranusinfo').style.display = 'block';
+
+        }
+
+
+        // Show Neptune
+
+        function NeptuneOn() {
+
+            document.getElementById('neptune').style.display = 'block';
+            document.getElementById('neptuneinfo').style.display = 'block';
+
+        }
+
+    </script>
+
+</body>
+</html>
