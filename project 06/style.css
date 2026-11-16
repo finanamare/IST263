@@ -1,0 +1,69 @@
+/* Project 6: simple CSS, Flexbox, and media queries */
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f4f6f8;
+    color: #223344;
+}
+header {
+    background-color: #24384a;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1 { font-size: 24px; margin: 0; }
+nav { display: flex; gap: 20px; }
+nav a { color: white; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+main { max-width: 1100px; margin: auto; padding: 20px; }
+h2 { margin-top: 25px; }
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 25px;
+    background-color: #e7eef4;
+    border: 1px solid #cad5df;
+    border-radius: 8px;
+}
+.hero-text { flex: 1; }
+.hero img { width: 42%; height: auto; border-radius: 6px; }
+.learn-link {
+    display: inline-block;
+    background-color: #24384a;
+    color: white;
+    padding: 10px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.cards { display: flex; gap: 20px; }
+.card {
+    flex: 1;
+    background-color: white;
+    border: 1px solid #ced8e1;
+    border-radius: 6px;
+    padding: 15px;
+}
+.card img { width: 100%; height: auto; }
+.card h3 { margin-bottom: 6px; }
+.card a { color: #205c83; }
+.reminder {
+    margin-top: 20px;
+    padding: 18px;
+    background-color: #e3ebf5;
+    border: 1px solid #c4d3e2;
+    border-radius: 6px;
+}
+.reminder h2 { margin-top: 0; }
+footer { background-color: #24384a; color: white; padding: 15px 25px; }
+footer p { margin: 0; }
+@media only screen and (max-width: 800px) {
+    header { flex-direction: column; align-items: flex-start; gap: 15px; }
+    nav { flex-direction: column; gap: 10px; }
+    .hero { flex-direction: column; }
+    .hero img { width: 100%; }
+    .cards { flex-direction: column; }
+    main { padding: 12px; }
+}
